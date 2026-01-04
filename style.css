@@ -1,0 +1,186 @@
+/* ===============================
+   IMPORT GOOGLE FONTS
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Pacifico&display=swap');
+
+/* ===============================
+   RESET & GLOBAL
+================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+    min-height: 100vh;
+
+    /* Background Biru Pastel Gradasi */
+    background: linear-gradient(-45deg, #e0f2fe, #bae6fd, #f0f9ff, #cbd5e1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
+    overflow-x: hidden;
+}
+
+/* Animasi background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   CONTAINER UTAMA
+================================ */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
+    text-align: center;
+}
+
+/* ===============================
+   JUDUL
+================================ */
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.6rem;
+    color: #0369a1;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #075985;
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(14, 165, 233, 0.2);
+}
+
+/* ===============================
+   LINK & BUTTON
+================================ */
+a {
+    color: #0284c7;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #0ea5e9;
+}
+
+/* Tombol utama */
+button {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #ffffff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 6px 15px rgba(14, 165, 233, 0.35);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.45);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ===============================
+   FORM INPUT
+================================ */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+    border: 1px solid #bae6fd;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   TABEL
+================================ */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 20px;
+}
+
+th {
+    background: #bae6fd;
+    color: #0369a1;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+td {
+    background: #ffffff;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Tombol aksi (Edit / Hapus) */
+td a {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    margin: 0 2px;
+    box-shadow: 0 2px 6px rgba(14, 165, 233, 0.2);
+    transition: all 0.2s ease;
+}
+
+td a:hover {
+    background: #bae6fd;
+    transform: translateY(-1px);
+}
+
+/* ===============================
+   PESAN NOTIFIKASI
+================================ */
+p {
+    font-weight: 600;
+    color: #0369a1;
+}
+/* Styling Emoticon Bergerak */
+.avatar {
+    position: fixed; /* Tetap di layar saat di-scroll */
+    font-size: 2.5rem;
+    pointer-events: none; /* Klik akan menembus ke tombol/teks di bawahnya */
+    z-index: 9999; /* Nilai tinggi agar muncul di depan semua teks dan container */
+    transition: transform 4s linear; /* Membuat pergerakan jalan terus secara halus */
+    left: 0;
+    top: 0;
+}
